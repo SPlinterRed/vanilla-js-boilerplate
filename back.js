@@ -9,13 +9,14 @@ const button3 = document.createElement('button');
 button3.id = 'beta';
 button3.textContent = 'betabutton';
 sigma.append(button3);
-for( i = 0; i < 5; i ++){
-    print("what the hell");
-    if(i == 4){
-        i = 0;
+
+button2.addEventListener('click',onbutton2click);
+button3.addEventListener('click',onbutton3click);
+
+function onbutton2click(){
         button2.remove();
-        button2.append(sigma);
+        button3.append(sigma);}
+        
+function onbutton3click(){
         button3.remove();
-        button2.append(sigma)
-    }
-}
+        button2.append(sigma);}
